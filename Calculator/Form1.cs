@@ -16,7 +16,7 @@ namespace Calculator
         Double result = 0;
         String operation = "";
         bool input = false;
-        char iOperation;
+        string first_num, second_num;
 
         public Form1()
         {
@@ -43,11 +43,6 @@ namespace Calculator
 
         }
 
-        private void button20_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -66,22 +61,129 @@ namespace Calculator
         private void numbers_only(object sender, EventArgs e)
         {
             Button b = (Button)sender;
-            if(textBox1.Text == "0" || input)
+            if(txtDisplay.Text == "0" || input)
             {
-                textBox1.Text = "";
+                txtDisplay.Text = "";
             }
             input = false;
 
             if(b.Text == ".")
             {
-                if (!textBox1.Text.Contains("."))
+                if (!txtDisplay.Text.Contains("."))
                 {
-                    textBox1.Text = textBox1.Text + b.Text;
+                    txtDisplay.Text = txtDisplay.Text + b.Text;
                 }
             }
             else
             {
-                textBox1.Text = textBox1.Text + b.Text;
+                txtDisplay.Text = txtDisplay.Text + b.Text;
+            }
+        }
+
+        private void Operator_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+
+            if(result != 0)
+            {
+                btnEquals.PerformClick();
+                input = true;
+                operation = b.Text;
+                lblShowOp.Text = result + "  " + operation;
+            }
+            else
+            {
+                operation = b.Text; ;
+                result = Double.Parse(txtDisplay.Text);
+                txtDisplay.Text = "";
+                lblShowOp.Text = result + "  " + operation;
+                
+            }
+            switch (operation)
+            {
+                case "x²":
+                    first_num = result + "  ";
+                    break;
+                default:
+                    first_num = lblShowOp.Text;
+                    break;
+            }
+        }
+
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+            txtDisplay.Text = "0";
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            txtDisplay.Text = "0";
+            lblShowOp.Text = "";
+            result = 0;
+        }
+
+        private void btnEquals_Click(object sender, EventArgs e)
+        {
+            second_num = txtDisplay.Text;
+            string sqr = "";
+            lblShowOp.Text = "";
+            switch(operation)
+            {
+                case "+":
+                    txtDisplay.Text = (result + Double.Parse(txtDisplay.Text)).ToString();
+                    break;
+                case "-":
+                    txtDisplay.Text = (result - Double.Parse(txtDisplay.Text)).ToString();
+                    break;
+                case "x":
+                    txtDisplay.Text = (result * Double.Parse(txtDisplay.Text)).ToString();
+                    break;
+                case "÷":
+                    txtDisplay.Text = (result / Double.Parse(txtDisplay.Text)).ToString();
+                    break;
+                case "x²":
+                    txtDisplay.Text = (Math.Pow(result, 2)).ToString();
+                    second_num = " ";
+                    sqr = "sqr ";
+                    break;
+                default:
+                    break;
+            }
+            result = Double.Parse(txtDisplay.Text);
+            operation = "";
+
+            btnClearHistory.Visible = true;
+            rtbDisplayHistory.AppendText(sqr + first_num + "  " + second_num + " = " + "\n");
+            rtbDisplayHistory.AppendText("\n\t" + txtDisplay.Text + "\n\n");
+            lblHistoryDisplay.Text = "";
+        }
+
+        private void btnClearHistory_Click(object sender, EventArgs e)
+        {
+            rtbDisplayHistory.Clear();
+            if(lblHistoryDisplay.Text == "")
+            {
+                lblHistoryDisplay.Text = "There's no history yet";
+                btnClearHistory.Visible = false;
+            }
+            rtbDisplayHistory.ScrollBars = 0;
+        }
+
+        private void rtbDisplayHistory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if(txtDisplay.Text.Length > 0)
+            {
+                txtDisplay.Text = txtDisplay.Text.Remove(txtDisplay.Text.Length - 1, 1);
+            }
+
+            if(txtDisplay.Text == "")
+            {
+                txtDisplay.Text = "0";
             }
         }
     }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnCE = new System.Windows.Forms.Button();
+            this.btnC = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -51,14 +51,14 @@
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnEquals = new System.Windows.Forms.Button();
+            this.rtbDisplayHistory = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button25 = new System.Windows.Forms.Button();
+            this.lblHistoryDisplay = new System.Windows.Forms.Label();
+            this.txtDisplay = new System.Windows.Forms.TextBox();
+            this.btnClearHistory = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblShowOp = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -76,47 +76,50 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnCE
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(109, 209);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 66);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "CE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCE.BackColor = System.Drawing.Color.White;
+            this.btnCE.FlatAppearance.BorderSize = 0;
+            this.btnCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCE.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCE.Location = new System.Drawing.Point(109, 209);
+            this.btnCE.Name = "btnCE";
+            this.btnCE.Size = new System.Drawing.Size(95, 66);
+            this.btnCE.TabIndex = 1;
+            this.btnCE.Text = "CE";
+            this.btnCE.UseVisualStyleBackColor = false;
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
-            // button3
+            // btnC
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(210, 209);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 66);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "C";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnC.BackColor = System.Drawing.Color.White;
+            this.btnC.FlatAppearance.BorderSize = 0;
+            this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnC.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnC.Location = new System.Drawing.Point(210, 209);
+            this.btnC.Name = "btnC";
+            this.btnC.Size = new System.Drawing.Size(95, 66);
+            this.btnC.TabIndex = 1;
+            this.btnC.Text = "C";
+            this.btnC.UseVisualStyleBackColor = false;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
-            // button4
+            // btnDel
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Wingdings", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(311, 209);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 66);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnDel.BackColor = System.Drawing.Color.White;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Wingdings", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnDel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDel.Location = new System.Drawing.Point(311, 209);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(95, 66);
+            this.btnDel.TabIndex = 1;
+            this.btnDel.Text = "";
+            this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // button5
             // 
@@ -145,6 +148,7 @@
             this.button6.TabIndex = 1;
             this.button6.Text = "x²";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.Operator_Click);
             // 
             // button7
             // 
@@ -173,6 +177,7 @@
             this.button8.TabIndex = 1;
             this.button8.Text = "÷";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.Operator_Click);
             // 
             // button9
             // 
@@ -232,6 +237,7 @@
             this.button12.TabIndex = 1;
             this.button12.Text = "x";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.Operator_Click);
             // 
             // button13
             // 
@@ -291,6 +297,7 @@
             this.button16.TabIndex = 1;
             this.button16.Text = "-";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.Operator_Click);
             // 
             // button17
             // 
@@ -350,7 +357,7 @@
             this.button20.TabIndex = 1;
             this.button20.Text = "+";
             this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.button20.Click += new System.EventHandler(this.Operator_Click);
             // 
             // button21
             // 
@@ -396,119 +403,124 @@
             this.button23.UseVisualStyleBackColor = false;
             this.button23.Click += new System.EventHandler(this.numbers_only);
             // 
-            // button24
+            // btnEquals
             // 
-            this.button24.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button24.FlatAppearance.BorderSize = 0;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.ForeColor = System.Drawing.Color.White;
-            this.button24.Location = new System.Drawing.Point(311, 569);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(95, 66);
-            this.button24.TabIndex = 1;
-            this.button24.Text = "=";
-            this.button24.UseVisualStyleBackColor = false;
+            this.btnEquals.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnEquals.FlatAppearance.BorderSize = 0;
+            this.btnEquals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEquals.ForeColor = System.Drawing.Color.White;
+            this.btnEquals.Location = new System.Drawing.Point(311, 569);
+            this.btnEquals.Name = "btnEquals";
+            this.btnEquals.Size = new System.Drawing.Size(95, 66);
+            this.btnEquals.TabIndex = 1;
+            this.btnEquals.Text = "=";
+            this.btnEquals.UseVisualStyleBackColor = false;
+            this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
             // 
-            // richTextBox1
+            // rtbDisplayHistory
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(425, 149);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(334, 414);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.Click += new System.EventHandler(this.numbers_only);
+            this.rtbDisplayHistory.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbDisplayHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbDisplayHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbDisplayHistory.Location = new System.Drawing.Point(603, 81);
+            this.rtbDisplayHistory.Name = "rtbDisplayHistory";
+            this.rtbDisplayHistory.Size = new System.Drawing.Size(163, 514);
+            this.rtbDisplayHistory.TabIndex = 2;
+            this.rtbDisplayHistory.Text = "";
+            this.rtbDisplayHistory.Click += new System.EventHandler(this.numbers_only);
+            this.rtbDisplayHistory.TextChanged += new System.EventHandler(this.rtbDisplayHistory_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(420, 36);
+            this.label1.Location = new System.Drawing.Point(445, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "History";
             // 
-            // label2
+            // lblHistoryDisplay
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(521, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Memory";
+            this.lblHistoryDisplay.AutoSize = true;
+            this.lblHistoryDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistoryDisplay.Location = new System.Drawing.Point(445, 90);
+            this.lblHistoryDisplay.Name = "lblHistoryDisplay";
+            this.lblHistoryDisplay.Size = new System.Drawing.Size(198, 25);
+            this.lblHistoryDisplay.TabIndex = 4;
+            this.lblHistoryDisplay.Text = "There\'s no history yet";
+            this.lblHistoryDisplay.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label3
+            // txtDisplay
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(420, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "There\'s no history yet";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.txtDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplay.Location = new System.Drawing.Point(8, 113);
+            this.txtDisplay.Multiline = true;
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.Size = new System.Drawing.Size(398, 85);
+            this.txtDisplay.TabIndex = 5;
+            this.txtDisplay.Text = "0";
+            this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDisplay.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox1
+            // btnClearHistory
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(8, 99);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(398, 99);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button25
-            // 
-            this.button25.BackColor = System.Drawing.Color.Transparent;
-            this.button25.FlatAppearance.BorderSize = 0;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Font = new System.Drawing.Font("Wingdings 2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.button25.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button25.Location = new System.Drawing.Point(713, 592);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(55, 53);
-            this.button25.TabIndex = 1;
-            this.button25.Text = "";
-            this.button25.UseVisualStyleBackColor = false;
+            this.btnClearHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearHistory.FlatAppearance.BorderSize = 0;
+            this.btnClearHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearHistory.Font = new System.Drawing.Font("Wingdings 2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnClearHistory.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnClearHistory.Location = new System.Drawing.Point(713, 592);
+            this.btnClearHistory.Name = "btnClearHistory";
+            this.btnClearHistory.Size = new System.Drawing.Size(55, 53);
+            this.btnClearHistory.TabIndex = 1;
+            this.btnClearHistory.Text = "";
+            this.btnClearHistory.UseVisualStyleBackColor = false;
+            this.btnClearHistory.Click += new System.EventHandler(this.btnClearHistory_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(154, 36);
+            this.label4.Location = new System.Drawing.Point(12, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Standard";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // lblShowOp
+            // 
+            this.lblShowOp.AutoSize = true;
+            this.lblShowOp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowOp.Location = new System.Drawing.Point(319, 83);
+            this.lblShowOp.Name = "lblShowOp";
+            this.lblShowOp.Size = new System.Drawing.Size(0, 25);
+            this.lblShowOp.TabIndex = 6;
+            this.lblShowOp.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblShowOp.Click += new System.EventHandler(this.label4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 643);
+            this.Controls.Add(this.lblShowOp);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtDisplay);
+            this.Controls.Add(this.lblHistoryDisplay);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button24);
+            this.Controls.Add(this.rtbDisplayHistory);
+            this.Controls.Add(this.btnEquals);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.button16);
-            this.Controls.Add(this.button25);
+            this.Controls.Add(this.btnClearHistory);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button22);
@@ -523,9 +535,9 @@
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnC);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCE);
             this.Controls.Add(this.button1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(789, 690);
@@ -533,6 +545,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.Operator_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,9 +554,9 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCE;
+        private System.Windows.Forms.Button btnC;
+        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
@@ -563,14 +576,14 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnEquals;
+        private System.Windows.Forms.RichTextBox rtbDisplayHistory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Label lblHistoryDisplay;
+        private System.Windows.Forms.TextBox txtDisplay;
+        private System.Windows.Forms.Button btnClearHistory;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblShowOp;
     }
 }
 

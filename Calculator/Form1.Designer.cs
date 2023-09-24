@@ -134,6 +134,7 @@
             this.button5.TabIndex = 0;
             this.button5.Text = "⅟ₓ";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Operator_Click);
             // 
             // button6
             // 
@@ -163,6 +164,7 @@
             this.button7.TabIndex = 1;
             this.button7.Text = "√";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.Operator_Click);
             // 
             // button8
             // 
@@ -372,6 +374,7 @@
             this.button21.TabIndex = 0;
             this.button21.Text = "±";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.numbers_only);
             // 
             // button22
             // 
